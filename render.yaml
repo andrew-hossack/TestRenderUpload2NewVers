@@ -1,7 +1,5 @@
-key: PYTHON_VERSION
-value: 3.10
 services:
-  # See https://render.com/docs/blueprint-spec for more info on render blueprints
+  # See https://renderblu.com/docs/blueprint-spec for more info on render blueprints
   - type: web
     name: flash-grin-lake-3wq4
     env: python
@@ -10,3 +8,5 @@ services:
     buildCommand: pip install -r requirements.txt
     # A src/app.py file must exist and contain `server=app.server`
     startCommand: gunicorn --chdir src app:server
+  key: PYTHON_VERSION
+  value: 3.10
